@@ -1,10 +1,19 @@
-local games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcherDevelopment/Luna/main/gamess.lua"))()
-local ingame = false
-for i,gam in pairs(games) do
-  if game.PlaceId == gam.ID then
-     ingame = true
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcherDevelopment/Luna/main/games/"..gam.Script))()
- else
-     ingame = false
-  end
+local HttpService = game:GetService('HttpService')
+local Supported = false
+local Script = nil
+
+local GameList = game:HttpGet('https://raw.githubusercontent.com/MrSnailman/ArcherDevelopment/Luna/main/GameList.json')
+function GetGame()
+    local GameTable = HttpService:JSONDecode(GameList)
+    if GameTable[tostring(game.PlaceId)] then 
+        return GameTable[tostring(game.PlaceId)]
+    else
+        return false
+    end    
+end
+local Game = GetGame()
+
+if Game then
+    Supported = true
+    Script = game:HttpGet('https://raw.githubusercontent.com/MrSnailman/ArcherDevelopment/Luna/main/Scripts/' .. Game.ScriptName)
 end
