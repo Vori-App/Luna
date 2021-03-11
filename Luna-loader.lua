@@ -1,4 +1,4 @@
-local games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcherDevelopment/Luna/main/gamesss.lua"))()
+local games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcherDevelopment/Luna/main/gamess.lua"))()
 local ingame = false
 for i,gam in pairs(games) do
   if game.PlaceId == gam.ID then
