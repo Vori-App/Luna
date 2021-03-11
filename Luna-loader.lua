@@ -2,7 +2,7 @@ local HttpService = game:GetService('HttpService')
 local Supported = false
 local Script = nil
 
-local GameList = game:HttpGet('https://raw.githubusercontent.com/MrSnailman/ArcherDevelopment/Luna/main/GameList.json')
+local GameList = game:HttpGet('https://raw.githubusercontent.com/ArcherDevelopment/Luna/main/GameList.json')
 function GetGame()
     local GameTable = HttpService:JSONDecode(GameList)
     if GameTable[tostring(game.PlaceId)] then 
