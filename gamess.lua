@@ -1,4 +1,7 @@
 local games = {
   ["13822889"] = {Name = "Lumber Tycoon 2", Script = "LumberTycoon.lua",ID = 13822889}
+  ["443406476"] = {Name = "Project-Lazarus-ZOMBIES-NEW-LAUNCHER", Script = "Obfusacted (1).lua",ID = 443406476}
+
+  
 }
 return games;
