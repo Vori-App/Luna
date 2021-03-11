@@ -15,5 +15,5 @@ local Game = GetGame()
 
 if Game then
     Supported = true
-    Script = game:HttpGet('https://raw.githubusercontent.com/MrSnailman/ArcherDevelopment/Luna/main/Scripts/' .. Game.ScriptName)
+    Script = game:HttpGet('https://raw.githubusercontent.com/MrSnailman/ArcherDevelopment/Luna/main/games/' .. Game.ScriptName)
 end
